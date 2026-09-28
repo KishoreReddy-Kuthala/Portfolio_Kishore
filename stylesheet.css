@@ -1,0 +1,138 @@
+html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #070b19;
+            color: #f8fafc;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #06b6d4, #6366f1, #c026d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-button {
+            background: linear-gradient(100deg, #0891b2, #4f46e5, #a21caf);
+            transition: all 0.35s ease;
+        }
+
+        .gradient-button:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #06b6d4, #c026d3);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #38bdf8;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            border: 1px solid #6366f1;
+            border-radius: 50%;
+            color: #67e8f9;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: white;
+            background: linear-gradient(135deg, #0891b2, #9333ea);
+            transform: translateY(-7px) rotate(5deg);
+            box-shadow: 0 0 20px #4f46e5;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 45, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.35s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            border-color: #22d3ee;
+            box-shadow: 0 15px 40px rgba(8, 145, 178, 0.15);
+        }
+
+        .profile-frame {
+            background: linear-gradient(135deg, #06b6d4, #7c3aed, #c026d3);
+            padding: 4px;
+            border-radius: 28px;
+            transform: rotate(2deg);
+            transition: transform 0.4s ease;
+        }
+
+        .profile-frame:hover {
+            transform: rotate(0deg) scale(1.03);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.3rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .skill-bar {
+            height: 7px;
+            border-radius: 20px;
+            background: #1e293b;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+        }
+
+        .fade-up {
+            animation: fadeUp 0.9s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
